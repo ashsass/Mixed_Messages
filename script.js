@@ -4,14 +4,6 @@ let randomNumber = () => {
     return randNum;
 }
 
-//Arrays that will hold the memes content. Using strings for now until I can figure out how to use media
-let emptyArray = [];
-
-let memeHolder = {
-    evilMeme: ['chaosCat1'],
-    neutralMeme: ['neutralCat1', 'neutralCat2', 'neutralCat3'],
-    goodMeme: ['goodCat1', 'goodCat2', 'goodCat3'],
-}
 
 //Variables for images
 let goodMeme1 = document.getElementById('good-meme-one');
@@ -25,3 +17,13 @@ let neutralMeme3 = document.getElementById('neutral-meme-three');
 let evilMeme1 = document.getElementById('evil-meme-one');
 let evilMeme2 = document.getElementById('evil-meme-two');
 let evilMeme3 = document.getElementById('evil-meme-three');
+
+
+//Arrays that will hold the memes content. Using strings for now until I can figure out how to use media
+let emptyArray = [];
+
+let memeHolder = {
+    goodMeme: [goodMeme1, goodMeme2, goodMeme3],
+    neutralMeme: [neutralMeme1, neutralMeme2, neutralMeme3],
+    evilMeme: [evilMeme1, evilMeme2, evilMeme3],
+}
