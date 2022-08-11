@@ -5,10 +5,22 @@ html{
 body {
     background-color: black;
     text-align: center;
+    color: white;
+    font-family: 'Catamaran', sans-serif;
 }
 
 h1{
-    color: white;
     font-size: 6rem;
     font-family: 'Silkscreen', cursive;
+}
+
+#button{
+    border: 2px solid white;
+    box-shadow: -3px -3px 2px;
+    width: 7rem;
+    height: 2.5rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
