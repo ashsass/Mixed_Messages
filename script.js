@@ -18,8 +18,8 @@ let evilMeme3 = document.getElementById('evil-meme-three');
 
 
 //Arrays that will hold the memes content. Using strings for now until I can figure out how to use media
-let emptyArray = 0;
-// emptyArray.style.display = 'none';
+let emptyArray1 = [];
+let emptyArray2 = [];
 
 let memeHolder = {
     0: [goodMeme1, goodMeme2, goodMeme3],
@@ -29,27 +29,34 @@ let memeHolder = {
 
 
 //Hide all memes until the button is clicked
-goodMeme1.style.display = 'none';
-goodMeme2.style.display = 'none';
-goodMeme3.style.display = 'none';
-neutralMeme1.style.display = 'none';
-neutralMeme2.style.display = 'none';
-neutralMeme3.style.display = 'none';
-evilMeme1.style.display = 'none';
-evilMeme2.style.display = 'none';
-evilMeme3.style.display = 'none';
+for(let i = 0; i<3; i++){
+    memeHolder[i].forEach(e => e.hidden = true)
+}
+
 
 //Click the button
 let button = document.getElementById('button');
 
-const showImage = function(){
-    let index1 = randomNumber();
-    let index2 = randomNumber();
+let index1 = randomNumber();
+let index2 = randomNumber();
 
-    emptyArray = memeHolder[index1][index2];
-    emptyArray.style.display = 'inline-block';
+
+const assignNewArray = (arr) => {
+    arr.push(memeHolder[index1][index2]);
+    return arr;
 }
 
-button.addEventListener('click', showImage);
+ assignNewArray(emptyArray1); //Setting a variable as the data from the function to use it as an event handler function 
 
-//Successfully got the button to show an image, but now I can't figure out how to get that image to disappear when the button is clicked again. I would need to access that portion of the memeHolder array, but if the function starts over then the index disappears. Maybe if I push it to the empty array and then change the hidden to true before the function body starts over?
+const toggleImage = () => {
+    let hiddenImage = emptyArray1[0].hidden;
+
+    if(hiddenImage){
+        emptyArray1[0].hidden = false;
+    }
+
+    else if(!hiddenImage){
+        emptyArray1[0].hidden = true;
+    }
+}
+ /*Cleaned up the code, and made it so that one photo will appear. I'm struggling to figure out how to get a new one to pop up in its place*/
