@@ -18,7 +18,8 @@ let evilMeme3 = document.getElementById('evil-meme-three');
 
 
 //Arrays that will hold the memes content. Using strings for now until I can figure out how to use media
-let emptyArray = [];
+let emptyArray = 0;
+// emptyArray.style.display = 'none';
 
 let memeHolder = {
     0: [goodMeme1, goodMeme2, goodMeme3],
@@ -28,15 +29,15 @@ let memeHolder = {
 
 
 //Hide all memes until the button is clicked
-goodMeme1.hidden = true;
-goodMeme2.hidden = true;
-goodMeme3.hidden = true;
-neutralMeme1.hidden = true;
-neutralMeme2.hidden = true;
-neutralMeme3.hidden = true;
-evilMeme1.hidden = true;
-evilMeme2.hidden = true;
-evilMeme3.hidden = true;
+goodMeme1.style.display = 'none';
+goodMeme2.style.display = 'none';
+goodMeme3.style.display = 'none';
+neutralMeme1.style.display = 'none';
+neutralMeme2.style.display = 'none';
+neutralMeme3.style.display = 'none';
+evilMeme1.style.display = 'none';
+evilMeme2.style.display = 'none';
+evilMeme3.style.display = 'none';
 
 //Click the button
 let button = document.getElementById('button');
@@ -45,7 +46,8 @@ const showImage = function(){
     let index1 = randomNumber();
     let index2 = randomNumber();
 
-    emptyArray.push(memeHolder[index1][index2].hidden = false);
+    emptyArray = memeHolder[index1][index2];
+    emptyArray.style.display = 'inline-block';
 }
 
 button.addEventListener('click', showImage);
