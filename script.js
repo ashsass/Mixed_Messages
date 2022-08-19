@@ -1,3 +1,6 @@
+//Array to hold urls
+const urlArray = ['./resources/photos/goodImage1.jpeg', './resources/photos/goodImage2.jpeg', './resources/photos/goodImage3.jpeg', './resources/photos/neutralImage1.jpeg', './resources/photos/neutralImage2.jpeg', './resources/photos/neutralImage3.jpeg', './resources/photos/evilImage1.jpeg', './resources/photos/evilImage2.jpeg', './resources/photos/evilImage3.jpeg'];
+
 //Random number generator will be used as a way to generate the meme when a button is clicked
 let randomNumber = () => {
     let randNum = Math.floor(Math.random()*3);
