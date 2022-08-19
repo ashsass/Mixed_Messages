@@ -7,6 +7,7 @@ let randomNumber = length => Math.floor(Math.random() * length)
 const getRandomData = arr => arr[randomNumber(arr.length)];
 
 
+
 const showMeme = () => {
     //Create a random number and set it as the index holding the meme
     let randomNumber = randomNumber();
