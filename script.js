@@ -6,6 +6,12 @@ let randomNumber = length => Math.floor(Math.random() * length)
 
 const getRandomData = arr => arr[randomNumber(arr.length)];
 
+<<<<<<< HEAD
+=======
+console.log(urlArray);
+console.log(randomNumber(10));
+console.log(getRandomData(urlArray));
+>>>>>>> 50aa8cd4a48702eda05c79cdfe9fafe3448168b6
 
 const showMeme = () => {
     //Create a random number and set it as the index holding the meme
