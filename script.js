@@ -2,10 +2,13 @@
 const urlArray = ['./resources/photos/goodImage1.jpeg', './resources/photos/goodImage2.jpeg', './resources/photos/goodImage3.jpeg', './resources/photos/neutralImage1.jpeg', './resources/photos/neutralImage2.jpeg', './resources/photos/neutralImage3.jpeg', './resources/photos/evilImage1.jpeg', './resources/photos/evilImage2.jpeg', './resources/photos/evilImage3.jpeg'];
 
 //Random number generator will be used as a way to generate the meme when a button is clicked
-let randomNumber = () => {
-    let randNum = Math.floor(Math.random()*urlArray.length);
-    return randNum;
-}
+let randomNumber = length => Math.floor(Math.random() * length)
+
+const getRandomData = arr => arr[randomNumber(arr.length)];
+
+console.log(urlArray);
+console.log(randomNumber(10));
+console.log(getRandomData(urlArray));
 
 const showMeme = () => {
     //Create a random number and set it as the index holding the meme
